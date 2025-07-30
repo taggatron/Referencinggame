@@ -1,0 +1,98 @@
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f4 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+#game-container {
+  width: 96vw;
+  height: 90vh;
+  margin: 2vh auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(80,120,255,0.15), 0 1.5px 8px rgba(0,0,0,0.08);
+  padding: 30px 20px 40px 20px;
+  position: relative;
+  overflow: hidden;
+  max-width: 1600px;
+  max-height: 900px;
+  border: 2px solid #b3c6ff;
+}
+#falling-source {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #e3e3ff 60%, #c7eaff 100%);
+  padding: 22px 32px;
+  border-radius: 16px;
+  font-size: 1.4em;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(80,120,255,0.10);
+  border: 1.5px solid #b3c6ff;
+  color: #2a3a5a;
+  font-weight: 500;
+  z-index: 2;
+  letter-spacing: 0.01em;
+}
+#options {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+#options button {
+  background: linear-gradient(90deg, #4f8cff 60%, #6fd6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 28px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(80,120,255,0.10);
+  transition: background 0.2s, transform 0.1s;
+  outline: none;
+  letter-spacing: 0.01em;
+}
+#options button:hover {
+  background: linear-gradient(90deg, #3766c3 60%, #4fd6ff 100%);
+  transform: scale(1.07);
+}
+#game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.2em;
+  color: #d32f2f;
+  background: #fff;
+  padding: 28px 60px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(211,47,47,0.10);
+  z-index: 10;
+  border: 2px solid #ffb3b3;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+#score {
+  position: absolute;
+  top: 18px;
+  right: 36px;
+  font-size: 1.3em;
+  color: #4f8cff;
+  background: #f0f6ff;
+  padding: 10px 24px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(80,120,255,0.08);
+  font-weight: 600;
+  border: 1.5px solid #b3c6ff;
+  z-index: 5;
+}
