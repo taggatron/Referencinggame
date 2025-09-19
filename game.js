@@ -1,7 +1,7 @@
 const sourcesBySubject = {
   science: [
     {
-      source: 'Smith, J. (2020). The Science of Learning. Oxford University Press.',
+      source: { title: 'The Science of Learning', type: 'Book', authors: 'Smith, J.', year: '2020' },
       correct: 'Smith, J. (2020). The Science of Learning. Oxford University Press.',
       options: [
         'Smith, J. (2020). The Science of Learning. Oxford University Press.',
@@ -10,7 +10,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Nguyen, T. (2022). Quantum Mechanics Explained. Cambridge: Cambridge University Press.',
+      source: { title: 'Quantum Mechanics Explained', type: 'Book', authors: 'Nguyen, T.', year: '2022' },
       correct: 'Nguyen, T. (2022). Quantum Mechanics Explained. Cambridge: Cambridge University Press.',
       options: [
         'Nguyen, T. (2022). Quantum Mechanics Explained. Cambridge: Cambridge University Press.',
@@ -19,7 +19,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Lee, A. (2019). Genetics Today. New York: Routledge.',
+      source: { title: 'Genetics Today', type: 'Book', authors: 'Lee, A.', year: '2019' },
       correct: 'Lee, A. (2019). Genetics Today. New York: Routledge.',
       options: [
         'Lee, A. (2019). Genetics Today. New York: Routledge.',
@@ -29,7 +29,7 @@ const sourcesBySubject = {
     },
     // Article and website examples to broaden Harvard references
     {
-      source: 'Garcia, M. & Patel, R. (2021). Advances in CRISPR technology. Journal of Molecular Biology, 433(15), 167012.',
+      source: { title: 'Advances in CRISPR technology', type: 'Journal Article', authors: 'Garcia, M. & Patel, R.', year: '2021' },
       correct: 'Garcia, M. & Patel, R. (2021). Advances in CRISPR technology. Journal of Molecular Biology, 433(15), 167012.',
       options: [
         'Garcia, M. & Patel, R. (2021). Advances in CRISPR technology. Journal of Molecular Biology, 433(15), 167012.',
@@ -38,18 +38,28 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'World Health Organization (WHO). (2020). Coronavirus disease (COVID-19) advice for the public. Available at: https://www.who.int/ (Accessed: 12 March 2021).',
+      source: { title: 'Coronavirus disease (COVID-19) advice for the public', type: 'Webpage', authors: 'World Health Organization (WHO)', year: '2020' },
       correct: 'World Health Organization (WHO). (2020). Coronavirus disease (COVID-19) advice for the public. Available at: https://www.who.int/ (Accessed: 12 March 2021).',
       options: [
         'World Health Organization (WHO). (2020). Coronavirus disease (COVID-19) advice for the public. Available at: https://www.who.int/ (Accessed: 12 March 2021).',
         'WHO. COVID-19 advice for the public. 2020.',
         'World Health Organization. (2020) Coronavirus disease (COVID-19) advice for the public: who.int'
       ]
+    },
+    // GenAI examples
+    {
+      source: { title: 'GPT-4 Technical Report', type: 'Report', authors: 'OpenAI', year: '2023' },
+      correct: 'OpenAI. (2023). GPT-4 Technical Report. Available at: https://arxiv.org/abs/2303.08774 (Accessed: 19 September 2025).',
+      options: [
+        'OpenAI. (2023). GPT-4 Technical Report. Available at: https://arxiv.org/abs/2303.08774 (Accessed: 19 September 2025).',
+        'OpenAI (2023) GPT-4 Technical Report arXiv 2303.08774',
+        'OpenAI 2023 GPT4 Technical Report Available at arxiv.org'
+      ]
     }
   ],
   history: [
     {
-      source: 'Brown, L. (2018). History of Art. Cambridge: Cambridge University Press.',
+      source: { title: 'History of Art', type: 'Book', authors: 'Brown, L.', year: '2018' },
       correct: 'Brown, L. (2018). History of Art. Cambridge: Cambridge University Press.',
       options: [
         'Brown, L. (2018). History of Art. Cambridge: Cambridge University Press.',
@@ -58,7 +68,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Evans, M. (2017). The Roman Empire. London: Penguin.',
+      source: { title: 'The Roman Empire', type: 'Book', authors: 'Evans, M.', year: '2017' },
       correct: 'Evans, M. (2017). The Roman Empire. London: Penguin.',
       options: [
         'Evans, M. (2017). The Roman Empire. London: Penguin.',
@@ -67,7 +77,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Taylor, S. (2021). Medieval Europe. Oxford: Oxford University Press.',
+      source: { title: 'Medieval Europe', type: 'Book', authors: 'Taylor, S.', year: '2021' },
       correct: 'Taylor, S. (2021). Medieval Europe. Oxford: Oxford University Press.',
       options: [
         'Taylor, S. (2021). Medieval Europe. Oxford: Oxford University Press.',
@@ -76,7 +86,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Ferguson, N. (2003). Empire: How Britain Made the Modern World. London: Allen Lane.',
+      source: { title: 'Empire: How Britain Made the Modern World', type: 'Book', authors: 'Ferguson, N.', year: '2003' },
       correct: 'Ferguson, N. (2003). Empire: How Britain Made the Modern World. London: Allen Lane.',
       options: [
         'Ferguson, N. (2003). Empire: How Britain Made the Modern World. London: Allen Lane.',
@@ -87,7 +97,7 @@ const sourcesBySubject = {
   ],
   literature: [
     {
-      source: 'Johnson, M. (2015). Modern Poetry. New York: Routledge.',
+      source: { title: 'Modern Poetry', type: 'Book', authors: 'Johnson, M.', year: '2015' },
       correct: 'Johnson, M. (2015). Modern Poetry. New York: Routledge.',
       options: [
         'Johnson, M. (2015). Modern Poetry. New York: Routledge.',
@@ -96,7 +106,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Clark, E. (2016). Shakespearean Drama. London: Penguin.',
+      source: { title: 'Shakespearean Drama', type: 'Book', authors: 'Clark, E.', year: '2016' },
       correct: 'Clark, E. (2016). Shakespearean Drama. London: Penguin.',
       options: [
         'Clark, E. (2016). Shakespearean Drama. London: Penguin.',
@@ -105,7 +115,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Miller, R. (2020). The Novel in the 21st Century. Cambridge: Cambridge University Press.',
+      source: { title: 'The Novel in the 21st Century', type: 'Book', authors: 'Miller, R.', year: '2020' },
       correct: 'Miller, R. (2020). The Novel in the 21st Century. Cambridge: Cambridge University Press.',
       options: [
         'Miller, R. (2020). The Novel in the 21st Century. Cambridge: Cambridge University Press.',
@@ -114,7 +124,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Eagleton, T. (2011). Why Marx Was Right. New Haven: Yale University Press.',
+      source: { title: 'Why Marx Was Right', type: 'Book', authors: 'Eagleton, T.', year: '2011' },
       correct: 'Eagleton, T. (2011). Why Marx Was Right. New Haven: Yale University Press.',
       options: [
         'Eagleton, T. (2011). Why Marx Was Right. New Haven: Yale University Press.',
@@ -125,7 +135,7 @@ const sourcesBySubject = {
   ],
   psychology: [
     {
-      source: 'Adams, P. (2018). Cognitive Psychology. New York: Routledge.',
+      source: { title: 'Cognitive Psychology', type: 'Book', authors: 'Adams, P.', year: '2018' },
       correct: 'Adams, P. (2018). Cognitive Psychology. New York: Routledge.',
       options: [
         'Adams, P. (2018). Cognitive Psychology. New York: Routledge.',
@@ -134,7 +144,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Baker, S. (2021). Social Development. Oxford: Oxford University Press.',
+      source: { title: 'Social Development', type: 'Book', authors: 'Baker, S.', year: '2021' },
       correct: 'Baker, S. (2021). Social Development. Oxford: Oxford University Press.',
       options: [
         'Baker, S. (2021). Social Development. Oxford: Oxford University Press.',
@@ -143,7 +153,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Davis, L. (2019). Theories of Personality. London: Penguin.',
+      source: { title: 'Theories of Personality', type: 'Book', authors: 'Davis, L.', year: '2019' },
       correct: 'Davis, L. (2019). Theories of Personality. London: Penguin.',
       options: [
         'Davis, L. (2019). Theories of Personality. London: Penguin.',
@@ -152,18 +162,28 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'American Psychiatric Association. (2013). Diagnostic and Statistical Manual of Mental Disorders (5th ed.). Washington, DC: APA.',
+      source: { title: 'Diagnostic and Statistical Manual of Mental Disorders (5th ed.)', type: 'Book', authors: 'American Psychiatric Association', year: '2013' },
       correct: 'American Psychiatric Association. (2013). Diagnostic and Statistical Manual of Mental Disorders (5th ed.). Washington, DC: APA.',
       options: [
         'American Psychiatric Association. (2013). Diagnostic and Statistical Manual of Mental Disorders (5th ed.). Washington, DC: APA.',
         'APA (2013) Diagnostic and Statistical Manual of Mental Disorders (5th ed.)',
         'American Psychiatric Association 2013 DSM-5 Washington DC APA'
       ]
+    },
+    // GenAI example
+    {
+      source: { title: 'Artificial Intelligence: A Modern Approach (4th ed.)', type: 'Book', authors: 'Russell, S. & Norvig, P.', year: '2021' },
+      correct: 'Russell, S. & Norvig, P. (2021). Artificial Intelligence: A Modern Approach (4th ed.). Harlow: Pearson. (Ch. on generative models).',
+      options: [
+        'Russell, S. & Norvig, P. (2021). Artificial Intelligence: A Modern Approach (4th ed.). Harlow: Pearson. (Ch. on generative models).',
+        'S. Russell and P. Norvig. Artificial Intelligence: A Modern Approach. 4th ed., Pearson, 2021.',
+        'Russell S, Norvig P 2021 AI A Modern Approach 4th ed Harlow Pearson'
+      ]
     }
   ],
   business: [
     {
-      source: 'Green, T. (2017). Business Ethics. New York: Routledge.',
+      source: { title: 'Business Ethics', type: 'Book', authors: 'Green, T.', year: '2017' },
       correct: 'Green, T. (2017). Business Ethics. New York: Routledge.',
       options: [
         'Green, T. (2017). Business Ethics. New York: Routledge.',
@@ -172,7 +192,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Hall, J. (2020). Marketing Principles. Oxford: Oxford University Press.',
+      source: { title: 'Marketing Principles', type: 'Book', authors: 'Hall, J.', year: '2020' },
       correct: 'Hall, J. (2020). Marketing Principles. Oxford: Oxford University Press.',
       options: [
         'Hall, J. (2020). Marketing Principles. Oxford: Oxford University Press.',
@@ -181,7 +201,7 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'King, S. (2018). Financial Management. Cambridge: Cambridge University Press.',
+      source: { title: 'Financial Management', type: 'Book', authors: 'King, S.', year: '2018' },
       correct: 'King, S. (2018). Financial Management. Cambridge: Cambridge University Press.',
       options: [
         'King, S. (2018). Financial Management. Cambridge: Cambridge University Press.',
@@ -190,12 +210,22 @@ const sourcesBySubject = {
       ]
     },
     {
-      source: 'Porter, M. E. (2008). The Five Competitive Forces That Shape Strategy. Harvard Business Review, 86(1), 78–93.',
+      source: { title: 'The Five Competitive Forces That Shape Strategy', type: 'Journal Article', authors: 'Porter, M. E.', year: '2008' },
       correct: 'Porter, M. E. (2008). The Five Competitive Forces That Shape Strategy. Harvard Business Review, 86(1), 78–93.',
       options: [
         'Porter, M. E. (2008). The Five Competitive Forces That Shape Strategy. Harvard Business Review, 86(1), 78–93.',
         'M. Porter. Five Forces. Harvard Business Review, 2008.',
         'Porter ME (2008) The Five Competitive Forces That Shape Strategy HBR 86(1) 78–93'
+      ]
+    },
+    // GenAI examples
+    {
+      source: { title: 'ChatGPT (Sep 2025 version)', type: 'Webpage', authors: 'OpenAI', year: '2025' },
+      correct: 'OpenAI. (2025). ChatGPT (Sep 2025 version) [Large language model]. Available at: https://chat.openai.com/ (Accessed: 19 September 2025).',
+      options: [
+        'OpenAI. (2025). ChatGPT (Sep 2025 version) [Large language model]. Available at: https://chat.openai.com/ (Accessed: 19 September 2025).',
+        'OpenAI (2025) ChatGPT [LLM] Available at chat.openai.com',
+        'OpenAI 2025 ChatGPT Sep 2025 version Large language model Accessed 19 Sept 2025'
       ]
     }
   ]
@@ -270,18 +300,19 @@ function nextQuestion() {
     if (sampleText) sampleText.style.display = 'none';
     falling.style.display = 'block';
     falling.style.top = '0px';
-    falling.textContent = blankOutReference(q.source);
+  // Show a summary card using structured metadata (non 1:1 with answers)
+  falling.textContent = buildSourceSummary(q.source);
     animateFalling();
   } else {
     // In-text citation question
     // Build sample text and 3 in-text options from the reference
-    const intext = buildInTextOptions(q.source);
+    const intext = buildInTextOptions(q.correct);
     options = intext.options;
     q.correctInText = intext.correct; // attach for checking
     // Show the full reference statically in the dashed box, and make the sample paragraph fall
     if (sampleText) {
       sampleText.style.display = 'block';
-      sampleText.textContent = q.source; // static reference in dashed style
+      sampleText.textContent = q.correct; // static reference in dashed style
     }
     falling.style.display = 'block';
     falling.style.top = '0px';
@@ -385,6 +416,40 @@ function buildInTextOptions(reference) {
   const options = [correct, wrong1, wrong2];
   shuffle(options);
   return { correct, options, sampleParagraph, sampleParagraphMasked };
+}
+
+// Build a non-1:1 summary for the falling bubble using the full reference
+function buildSourceSummary(refOrObj) {
+  // If an object is provided, prefer its metadata
+  if (typeof refOrObj === 'object' && refOrObj !== null) {
+    const { title = 'Untitled', type = 'Source', authors = 'Unknown', year = 'n.d.' } = refOrObj;
+    const icon = type === 'Book' ? '📘' : type === 'Webpage' ? '🌐' : type === 'Journal Article' ? '📰' : '📄';
+    return `${icon} ${type} — ${title} • ${authors} (${year})`;
+  }
+  const fullReference = String(refOrObj);
+  // Extract authors and year
+  const ay = fullReference.match(/^(.*?)\s*\((\d{4})\)/);
+  const authors = ay ? ay[1] : 'Unknown';
+  const year = ay ? ay[2] : 'n.d.';
+  // Extract title between ") . Title . " pattern
+  const titleMatch = fullReference.match(/\)\.\s*(.*?)\./);
+  const title = titleMatch ? titleMatch[1] : 'Untitled';
+  // Infer type from cues
+  const lower = fullReference.toLowerCase();
+  let type = 'Source';
+  let icon = '📄';
+  if (lower.includes('available at:') || lower.includes('http')) {
+    type = 'Webpage'; icon = '🌐';
+  } else if (/\d+\s*\(\d+\)/.test(fullReference) || lower.includes('review') || lower.includes('journal')) {
+    type = 'Journal Article'; icon = '📰';
+  } else if (/[^:]+:\s*[^.]+\./.test(fullReference)) {
+    // City: Publisher.
+    type = 'Book'; icon = '📘';
+  } else if (lower.includes('technical report') || lower.includes('report')) {
+    type = 'Report'; icon = '📄';
+  }
+  // Compose concise summary
+  return `${icon} ${type} — ${title} • ${authors} (${year})`;
 }
 
 document.getElementById('subject-select').addEventListener('change', function(e) {

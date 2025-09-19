@@ -82,6 +82,26 @@ Referencinggame/
 - **Score System**: Real-time score tracking and display
 
 ## 🎓 Educational Value
+## 🤖 Citing Generative AI (Harvard examples)
+
+Below are example patterns often recommended by institutions. Always check your university’s specific Harvard guide.
+
+- In-text (tool as author):
+   - (OpenAI, 2025)
+   - Narrative: According to OpenAI (2025), …
+
+- Reference list (model output used):
+   - OpenAI. (2025). ChatGPT (Sep 2025 version) [Large language model]. Available at: https://chat.openai.com/ (Accessed: 19 September 2025).
+
+- Reference list (technical report):
+   - OpenAI. (2023). GPT-4 Technical Report. Available at: https://arxiv.org/abs/2303.08774 (Accessed: 19 September 2025).
+
+- In-text (prompted content paraphrased):
+   - Paraphrase: Recent outputs suggest … (OpenAI, 2025).
+   - Quoted exact wording should include a quote and an indication of the AI source.
+
+Tip: Include a short methodology note in your assignment (e.g., “An LLM was used to ideate examples. Outputs were checked and edited.”) if your institution requires disclosure.
+
 
 This game helps students with:
 - **Citation Format Recognition**: Practice identifying correct academic formatting
