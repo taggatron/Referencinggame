@@ -19,12 +19,16 @@
       </select>
     </div>
     <div id="falling-source"></div>
+    <div id="sample-text" aria-live="polite" style="display:none;"></div>
     <div id="options">
       <button id="option1"></button>
       <button id="option2"></button>
       <button id="option3"></button>
     </div>
-    <div id="game-over" style="display:none;">Game Over</div>
+    <div id="game-over" style="display:none;">
+      <div class="game-over-title">Game Over</div>
+      <button id="restart-btn" type="button">Restart</button>
+    </div>
   </div>
   <script src="game.js"></script>
 </body>

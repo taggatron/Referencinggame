@@ -8,20 +8,24 @@ The Academic Referencing Game presents students with incomplete academic referen
 
 ## ✨ Features
 
-- **Multiple Subject Areas**: Choose from Science, History, Literature, Psychology, and Business
-- **Dynamic Gameplay**: References fall down the screen with time pressure
-- **Educational Focus**: Practice proper academic citation formatting
-- **Score Tracking**: Keep track of correct answers
-- **Responsive Design**: Works on desktop and mobile devices
-- **Clean UI**: Modern, accessible interface with smooth animations
+- Multiple Subject Areas: Science, History, Literature, Psychology, Business
+- Dynamic Gameplay: Reference mode has falling prompts with time pressure
+- New In-text Citation Mode: Given a full reference and a sample paragraph, choose the correct Harvard-style in-text citation from 3 options
+- Broader Harvard References: Mix of books, journal articles, reports and web sources
+- Score Tracking: Keep track of correct answers
+- Responsive Design: Works on desktop and mobile devices with fluid typography and no overlap
+- Clean UI: Modern, accessible interface with smooth animations
 
 ## 🎯 How to Play
 
-1. **Select a Subject**: Choose from the dropdown menu (Science, History, Literature, Psychology, or Business)
-2. **Read the Reference**: A partially completed academic reference will appear at the top and fall down
-3. **Choose the Correct Format**: Select the properly formatted citation from the three options at the bottom
-4. **Beat the Clock**: Answer before the reference reaches the bottom of the screen
-5. **Build Your Score**: Correct answers increase your score and present new challenges
+1. Select a Subject from the dropdown
+2. A question appears in one of two modes:
+   - Reference mode: a partially blanked reference falls from the top
+   - In-text mode: a full reference displays with a sample paragraph
+3. Choose the correct option from the three choices at the bottom
+4. Beat the Clock: in Reference mode, answer before it reaches the bottom (In-text mode has no fall)
+5. Build Your Score: each correct answer increases your score
+6. Restart: after Game Over, click the Restart button to play again
 
 ## 🚀 Getting Started
 
@@ -108,8 +112,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🐛 Known Issues
 
-- Game speed is currently fixed - future versions may include difficulty settings
-- Limited to book citations - journal articles and other source types could be added
+- Game speed (Reference mode) is currently fixed - future versions may include difficulty settings
 
 ## 🚀 Future Enhancements
 
