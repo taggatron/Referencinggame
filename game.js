@@ -278,16 +278,15 @@ function nextQuestion() {
     const intext = buildInTextOptions(q.source);
     options = intext.options;
     q.correctInText = intext.correct; // attach for checking
-    // Display prompt area with sample text, keep the falling reference visible but static at top
-    falling.style.display = 'block';
-    falling.style.top = '0px';
-    falling.textContent = q.source; // show full reference as the prompt
+    // Show the full reference statically in the dashed box, and make the sample paragraph fall
     if (sampleText) {
       sampleText.style.display = 'block';
-      sampleText.textContent = intext.sampleParagraph;
+      sampleText.textContent = q.source; // static reference in dashed style
     }
-    // For in-text citation, do not animate falling to avoid overlap; answers are below
-    clearInterval(fallingInterval);
+    falling.style.display = 'block';
+    falling.style.top = '0px';
+    falling.textContent = intext.sampleParagraph; // falling sample paragraph
+    animateFalling();
   }
   options.forEach((opt, i) => {
     const btn = document.getElementById('option' + (i + 1));
