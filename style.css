@@ -135,6 +135,7 @@ body {
   font-weight: 600;
   border: 1.5px solid #b3c6ff;
   z-index: 5;
+  white-space: nowrap;
 }
 
 /* Mobile adjustments */
@@ -149,5 +150,9 @@ body {
   /* Keep options pinned near bottom even on mobile, still 3 columns */
   #options { position: absolute; bottom: 16px; left: 0; width: 100%; }
   #options button { width: 100%; }
-  #score { position: static; margin: 12px auto 0; display: inline-block; }
+  /* Keep score on same top row */
+  #score { position: absolute; top: 12px; right: 16px; margin: 0; }
 }
+
+/* Prevent Subject label from wrapping */
+#subject-label { white-space: nowrap; }
