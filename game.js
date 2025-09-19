@@ -285,7 +285,7 @@ function nextQuestion() {
     }
     falling.style.display = 'block';
     falling.style.top = '0px';
-    falling.textContent = intext.sampleParagraph; // falling sample paragraph
+    falling.textContent = intext.sampleParagraphMasked; // falling sample paragraph with placeholder
     animateFalling();
   }
   options.forEach((opt, i) => {
@@ -379,10 +379,12 @@ function buildInTextOptions(reference) {
   const wrong2 = correct.replace('(', '(').replace(', ', ' ');
 
   const sampleParagraph = sampleBase + correct + ', highlighting methodological rigor.';
+  // Masked version for the falling snippet to avoid revealing the answer
+  const sampleParagraphMasked = sampleBase + '(Citation needed)' + ', highlighting methodological rigor.';
   // Return shuffled options
   const options = [correct, wrong1, wrong2];
   shuffle(options);
-  return { correct, options, sampleParagraph };
+  return { correct, options, sampleParagraph, sampleParagraphMasked };
 }
 
 document.getElementById('subject-select').addEventListener('change', function(e) {
