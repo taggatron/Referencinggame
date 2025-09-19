@@ -57,15 +57,16 @@ body {
 }
 #options {
   position: absolute;
-  bottom: 40px;
+  bottom: clamp(12px, 3vh, 40px);
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  display: grid; /* one row, three columns */
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  justify-items: center;
   z-index: 1;
   gap: 12px;
   padding: 0 12px;
-  flex-wrap: wrap;
 }
 #options button {
   background: linear-gradient(90deg, #4f8cff 60%, #6fd6ff 100%);
@@ -80,7 +81,10 @@ body {
   transition: background 0.2s, transform 0.1s;
   outline: none;
   letter-spacing: 0.01em;
-  min-width: min(100%, 420px);
+  width: 100%; /* fill grid cell */
+  white-space: normal; /* allow wrapping */
+  overflow-wrap: anywhere; /* break long strings */
+  word-break: break-word;
 }
 #options button:hover {
   background: linear-gradient(90deg, #3766c3 60%, #4fd6ff 100%);
@@ -142,7 +146,8 @@ body {
     min-height: 92vh;
   }
   #falling-source { max-width: calc(100% - 40px); }
-  #options { position: static; margin-top: 24px; }
-  #options button { min-width: 100%; }
+  /* Keep options pinned near bottom even on mobile, still 3 columns */
+  #options { position: absolute; bottom: 16px; left: 0; width: 100%; }
+  #options button { width: 100%; }
   #score { position: static; margin: 12px auto 0; display: inline-block; }
 }
